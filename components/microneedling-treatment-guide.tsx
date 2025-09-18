@@ -118,12 +118,12 @@ const treatmentSteps: TreatmentStep[] = [
   },
   {
     id: 12,
-    title: "Transition vers les sourcils",
-    duration: "2 min",
+    title: "Préparation de l'espace sourcils",
+    duration: "3 min",
     image: "/images/step-12.png",
     video: "/videos/step-12.mp4",
-    description: "Pendant que les cils posent sous le film plastique, passons à la technique de rehaussement des sourcils. Préparez les outils spécialisés pour cette partie du traitement.",
-    benefits: ["Optimisation du temps", "Efficacité du protocole", "Transition fluide"],
+    description: "Préparez la zone des sourcils et organisez les outils spécialisés pour la partie sourcils du traitement. Nettoyez et désinfectez tous les instruments nécessaires.",
+    benefits: ["Zone préparée", "Outils organisés", "Hygiène maintenue"],
   },
   {
     id: 13,
@@ -524,131 +524,109 @@ export default function MicroneedlingTreatmentGuide() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-9 gap-4 p-2 md:p-4">
-          {currentStep === 11 ? ( // Updated condition to check for step 12 (index 11)
-            <div className="md:col-span-9">
+          <>
+            <div className="md:col-span-4 hidden md:flex flex-col justify-center">
               <motion.div
-                key={`transition-${currentStep}`}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
+                key={`title-${currentStep}`}
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.5 }}
-                className="bg-white rounded-3xl p-8 md:p-12 shadow-lg text-center min-h-[400px] flex flex-col justify-center"
+                className="bg-white rounded-3xl p-4 md:p-6 shadow-lg mb-4 md:mb-0"
               >
-                <h2 className="text-3xl md:text-4xl font-bold font-saeada text-gray-800 mb-6">
-                  Transition vers les sourcils
+                <div className="flex justify-center mb-4">
+                  <div className="w-40 h-40 bg-gradient-to-br from-blue-50 to-violet-50 rounded-xl overflow-hidden shadow-md">
+                    {currentStepData.image && (
+                      <Image
+                        src={currentStepData.image || "/placeholder.svg"}
+                        alt={`${currentStepData.title} illustration`}
+                        width={160}
+                        height={160}
+                        className="w-full h-full object-contain"
+                      />
+                    )}
+                  </div>
+                </div>
+
+                <h2 className="text-2xl md:text-3xl font-bold font-saeada text-gray-800 mb-2 md:mb-3 text-center md:text-left">
+                  {currentStepData.title}
                 </h2>
-                <p className="text-lg md:text-xl font-quicksand text-gray-600 leading-relaxed max-w-3xl mx-auto">
-                  Pendant que les cils posent sous le film plastique, passons à la technique de rehaussement des
-                  sourcils.
+                <div className="flex justify-center md:justify-start mb-3">
+                  <span className="inline-block px-3 py-1 md:px-4 md:py-2 bg-brand-gradient text-white rounded-full text-sm md:text-base font-bold font-quicksand">
+                    {currentStepData.duration}
+                  </span>
+                </div>
+                <p className="text-sm md:text-base font-quicksand text-gray-600 leading-relaxed text-center md:text-left">
+                  {currentStepData.description}
                 </p>
               </motion.div>
             </div>
-          ) : (
-            <>
-              <div className="md:col-span-4 hidden md:flex flex-col justify-center">
-                <motion.div
-                  key={`title-${currentStep}`}
-                  initial={{ opacity: 0, x: -20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.5 }}
-                  className="bg-white rounded-3xl p-4 md:p-6 shadow-lg mb-4 md:mb-0"
-                >
-                  <div className="flex justify-center mb-4">
-                    <div className="w-40 h-40 bg-gradient-to-br from-blue-50 to-violet-50 rounded-xl overflow-hidden shadow-md">
-                      {currentStepData.image && (
-                        <Image
-                          src={currentStepData.image || "/placeholder.svg"}
-                          alt={`${currentStepData.title} illustration`}
-                          width={160}
-                          height={160}
-                          className="w-full h-full object-contain"
-                        />
-                      )}
-                    </div>
-                  </div>
 
-                  <h2 className="text-2xl md:text-3xl font-bold font-saeada text-gray-800 mb-2 md:mb-3 text-center md:text-left">
-                    {currentStepData.title}
-                  </h2>
-                  <div className="flex justify-center md:justify-start mb-3">
-                    <span className="inline-block px-3 py-1 md:px-4 md:py-2 bg-brand-gradient text-white rounded-full text-sm md:text-base font-bold font-quicksand">
-                      {currentStepData.duration}
-                    </span>
-                  </div>
-                  <p className="text-sm md:text-base font-quicksand text-gray-600 leading-relaxed text-center md:text-left">
-                    {currentStepData.description}
-                  </p>
-                </motion.div>
+            <div className="md:col-span-5 order-first md:order-none">
+              <div className="relative">
+                <AnimatePresence mode="wait">
+                  <motion.div
+                    key={currentStepData.id}
+                    initial={{ opacity: 0, scale: 0.95 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    exit={{ opacity: 0, scale: 0.95 }}
+                    transition={{ duration: 0.5 }}
+                    className="relative w-full h-64 sm:h-80 md:h-[28rem] bg-gradient-to-br from-blue-50 to-violet-50 rounded-3xl overflow-hidden shadow-lg"
+                  >
+                    {currentStepData.video ? (
+                      <video
+                        key={currentStepData.video}
+                        className="w-full h-full object-contain"
+                        autoPlay
+                        loop
+                        muted
+                        playsInline
+                      >
+                        <source src={currentStepData.video} type="video/mp4" />
+                        Your browser does not support the video tag.
+                      </video>
+                    ) : currentStepData.image ? (
+                      <Image
+                        src={currentStepData.image || "/placeholder.svg"}
+                        alt={currentStepData.title}
+                        fill
+                        style={{ objectFit: "contain" }}
+                        priority
+                      />
+                    ) : (
+                      <div className="w-full h-full flex items-center justify-center text-gray-400">
+                        <span>Vidéo non disponible</span>
+                      </div>
+                    )}
+
+                    {isPlaying && (
+                      <motion.div
+                        className="absolute inset-0 pointer-events-none rounded-3xl"
+                        animate={{
+                          boxShadow: [
+                            "0 0 0 0 rgba(0, 4, 53, 0.5)",
+                            "0 0 0 8px rgba(0, 4, 53, 0.2)",
+                            "0 0 0 0 rgba(0, 4, 53, 0.5)",
+                          ],
+                        }}
+                        transition={{ duration: 2, repeat: Number.POSITIVE_INFINITY }}
+                      />
+                    )}
+                  </motion.div>
+                </AnimatePresence>
+
+                <AnimatePresence>{showCompletion && <CompletionAnimation />}</AnimatePresence>
               </div>
-
-              <div className="md:col-span-5 order-first md:order-none">
-                <div className="relative">
-                  <AnimatePresence mode="wait">
-                    <motion.div
-                      key={currentStepData.id}
-                      initial={{ opacity: 0, scale: 0.95 }}
-                      animate={{ opacity: 1, scale: 1 }}
-                      exit={{ opacity: 0, scale: 0.95 }}
-                      transition={{ duration: 0.5 }}
-                      className="relative w-full h-64 sm:h-80 md:h-[28rem] bg-gradient-to-br from-blue-50 to-violet-50 rounded-3xl overflow-hidden shadow-lg"
-                    >
-                      {currentStepData.video ? (
-                        <video
-                          key={currentStepData.video}
-                          className="w-full h-full object-contain"
-                          autoPlay
-                          loop
-                          muted
-                          playsInline
-                        >
-                          <source src={currentStepData.video} type="video/mp4" />
-                          Your browser does not support the video tag.
-                        </video>
-                      ) : currentStepData.image ? (
-                        <Image
-                          src={currentStepData.image || "/placeholder.svg"}
-                          alt={currentStepData.title}
-                          fill
-                          style={{ objectFit: "contain" }}
-                          priority
-                        />
-                      ) : (
-                        <div className="w-full h-full flex items-center justify-center text-gray-400">
-                          <span>Vidéo non disponible</span>
-                        </div>
-                      )}
-
-                      {isPlaying && (
-                        <motion.div
-                          className="absolute inset-0 pointer-events-none rounded-3xl"
-                          animate={{
-                            boxShadow: [
-                              "0 0 0 0 rgba(0, 4, 53, 0.5)",
-                              "0 0 0 8px rgba(0, 4, 53, 0.2)",
-                              "0 0 0 0 rgba(0, 4, 53, 0.5)",
-                            ],
-                          }}
-                          transition={{ duration: 2, repeat: Number.POSITIVE_INFINITY }}
-                        />
-                      )}
-                    </motion.div>
-                  </AnimatePresence>
-
-                  <AnimatePresence>{showCompletion && <CompletionAnimation />}</AnimatePresence>
-                </div>
-              </div>
-            </>
-          )}
+            </div>
+          </>
         </div>
 
         <div className="md:hidden bg-white mx-2 mb-2 rounded-3xl shadow-lg overflow-hidden">
           <div className="p-4">
             <div className="text-center mb-3">
               <h2 className="text-xl font-bold font-saeada text-gray-800 mb-2">{currentStepData.title}</h2>
-              {currentStep !== 11 && (
-                <span className="inline-block px-4 py-2 bg-brand-gradient text-white rounded-full text-sm font-bold font-quicksand">
-                  {currentStepData.duration}
-                </span>
-              )}
+              <span className="inline-block px-4 py-2 bg-brand-gradient text-white rounded-full text-sm font-bold font-quicksand">
+              {currentStepData.duration}
+            </span>
             </div>
 
           </div>
