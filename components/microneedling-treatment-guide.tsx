@@ -37,13 +37,12 @@ const treatmentSteps: TreatmentStep[] = [
   },
   {
     id: 3,
-    title: "Préparation des cils", // Updated title for lash lifting
+    title: "Préparation des cils",
     duration: "10 min",
     image: "/images/step-3.png",
     video: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Designsanstitre24-ezgif.com-crop-video-4yVtSF4r1cdT5b7ablxpJjhmc4bXtd.mp4",
-    description:
-      "Nettoyez délicatement la zone des cils avec un démaquillant spécialisé pour éliminer tout résidu de maquillage, huiles naturelles ou impuretés. Utilisez un coton-tige ou une lingette douce pour nettoyer chaque cil individuellement, en veillant à ce qu'ils soient parfaitement propres et dégraissés avant d'appliquer les produits de lash lifting.", // Updated description for lash preparation instead of eyebrow skin preparation
-    benefits: ["Cils propres", "Préparation optimale", "Adhérence parfaite"], // Updated benefits for lash lifting context
+    description: "Nettoyez délicatement la zone des cils avec un démaquillant spécialisé pour éliminer tout résidu de maquillage, huiles naturelles ou impuretés. Utilisez un coton-tige ou une lingette douce pour nettoyer chaque cil individuellement, en veillant à ce qu'ils soient parfaitement propres et dégraissés avant d'appliquer les produits de lash lifting.",
+    benefits: ["Cils propres", "Préparation optimale", "Adhérence parfaite"],
   },
   {
     id: 4,
@@ -51,8 +50,7 @@ const treatmentSteps: TreatmentStep[] = [
     duration: "8 min",
     image: "/images/step-4.png",
     video: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Designsanstitre25-ezgif.com-crop-video-9Cb4eOhgaRBGF7p1zI7tdTPnG13Ww2.mp4",
-    description:
-      "Appliquez délicatement l'adhésif spécialisé pour lash lifting sur la paupière supérieure à l'aide d'un applicateur fin. Veillez à créer une ligne uniforme le long de la ligne des cils pour assurer une adhérence optimale. Laissez l'adhésif devenir légèrement collant avant de procéder à l'étape suivante.",
+    description: "Appliquez délicatement l'adhésif spécialisé pour lash lifting sur la paupière supérieure à l'aide d'un applicateur fin. Veillez à créer une ligne uniforme le long de la ligne des cils pour assurer une adhérence optimale. Laissez l'adhésif devenir légèrement collant avant de procéder à l'étape suivante.",
     benefits: ["Adhérence parfaite", "Positionnement précis", "Base solide pour le lifting"],
   },
   {
@@ -61,8 +59,7 @@ const treatmentSteps: TreatmentStep[] = [
     duration: "3 min",
     image: "/images/step-5.png",
     video: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Designsanstitre27-ezgif.com-crop-video-2QPmjTfZ05emFT6G4ALzZiuMTfUbuM.mp4",
-    description:
-      "Appliquez délicatement l'adhésif spécialisé sur le bouclier en silicone à l'aide d'un applicateur fin. Veillez à répartir uniformément l'adhésif sur toute la surface du bouclier pour assurer une adhérence optimale. Cette étape est cruciale pour maintenir les cils en position pendant le processus de lifting.",
+    description: "Appliquez délicatement l'adhésif spécialisé sur le bouclier en silicone à l'aide d'un applicateur fin. Veillez à répartir uniformément l'adhésif sur toute la surface du bouclier pour assurer une adhérence optimale. Cette étape est cruciale pour maintenir les cils en position pendant le processus de lifting.",
     benefits: ["Adhérence parfaite", "Positionnement optimal", "Base solide pour le lifting"],
   },
   {
@@ -71,248 +68,187 @@ const treatmentSteps: TreatmentStep[] = [
     duration: "2 min",
     image: "/images/step-6.png",
     video: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Design%20sans%20titre%20%2817%29%20%28online-video-cutter.com%29%20%281%29%20%281%29-JvmBObVgrLjd7CpirGV63Z20QyrBpO.mp4",
-    description:
-      "Placez soigneusement le bouclier en silicone sur la paupière, au plus près de la racine des cils, en le fixant sur la ligne d'adhésif précédemment appliquée. Appuyez doucement avec vos doigts ou un outil pour le faire adhérer fermement. Un bon positionnement est la clé pour obtenir la courbure désirée.",
+    description: "Placez soigneusement le bouclier en silicone sur la paupière, au plus près de la racine des cils, en le fixant sur la ligne d'adhésif précédemment appliquée. Appuyez doucement avec vos doigts ou un outil pour le faire adhérer fermement. Un bon positionnement est la clé pour obtenir la courbure désirée.",
     benefits: ["Positionnement précis", "Courbure optimale", "Base solide pour le lifting"],
   },
   {
     id: 7,
     title: "Application d'adhésif sur le dessus du bouclier",
-    duration: "1 min", // Updated duration to 1 minute
+    duration: "1 min",
     image: "/images/step-7.png",
     video: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Designsanstitre19-ezgif.com-crop-video%20%281%29-O33amVNCF8lMc93bPWPncNXKBQMymR.mp4",
-    description:
-      "Appliquez une nouvelle couche d'adhésif sur la surface supérieure et incurvée du bouclier en silicone. C'est sur cette surface que les cils seront fixés. Assurez-vous que la couche est uniforme pour que chaque cil adhère correctement.",
-    benefits: ["Adhérence optimale des cils", "Application uniforme", "Base parfaite pour le lifting"], // Updated benefits for lash adhesion on shield
+    description: "Appliquez une nouvelle couche d'adhésif sur la surface supérieure et incurvée du bouclier en silicone. C'est sur cette surface que les cils seront fixés. Assurez-vous que la couche est uniforme pour que chaque cil adhère correctement.",
+    benefits: ["Adhérence optimale des cils", "Application uniforme", "Base parfaite pour le lifting"],
   },
   {
     id: 8,
-    title: "Levage et fixation des cils", // Updated title for lash lifting and fixing process
-    duration: "4 min", // Updated duration to 4 minutes
+    title: "Levage et fixation des cils",
+    duration: "4 min",
     image: "/images/step-8.png",
     video: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Designsanstitre20-ezgif.com-crop-video-VuULhV4MX3U34TZEXxu9aF2qwTyJXf.mp4",
-    description:
-      "Utilisez un bâtonnet en bois ou un outil de lifting pour soulever les cils un par un depuis la racine et les presser contre le bouclier encollé. Séparez bien chaque cil pour qu'ils soient parallèles et bien répartis sur toute la surface du bouclier pour un résultat final net et sans paquets.", // Updated description for detailed lash lifting technique
-    benefits: ["Séparation parfaite des cils", "Répartition uniforme", "Résultat sans paquets"], // Updated benefits for lash lifting process
+    description: "Utilisez un bâtonnet en bois ou un outil de lifting pour soulever les cils un par un depuis la racine et les presser contre le bouclier encollé. Séparez bien chaque cil pour qu'ils soient parallèles et bien répartis sur toute la surface du bouclier pour un résultat final net et sans paquets.",
+    benefits: ["Séparation parfaite des cils", "Répartition uniforme", "Résultat sans paquets"],
   },
   {
     id: 9,
-    title: "Application de la lotion neutralisante (cils)",
-    duration: "10 min",
+    title: "Application de la première lotion de lifting",
+    duration: "12 min",
     image: "/images/step-9.png",
     video: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Designsanstitre21-ezgif.com-crop-video-k6uNi4ecTobRYntkaxT8Ne3h6kyv5x.mp4",
-    description:
-      'Le temps de pose des cils est maintenant terminé. Retirez le film plastique des yeux, nettoyez la première lotion, puis appliquez la lotion fixatrice (neutralisante) sur les cils pour "verrouiller" leur courbure. Recouvrez à nouveau de film et laissez poser 15 minutes.',
-    benefits: ["Courbure verrouillée", "Effet longue durée", "Résultat optimal"],
+    description: "Appliquez la première lotion de lifting sur les cils pour commencer le processus de modification de leur structure. Recouvrez avec un film plastique et laissez poser selon le temps recommandé pour votre type de cils.",
+    benefits: ["Décomposition des liaisons", "Préparation au moulage", "Flexibilité des cils"],
   },
   {
     id: 10,
-    title: "Nettoyage final complet",
-    duration: "3 min",
+    title: "Application de la lotion neutralisante",
+    duration: "10 min",
     image: "/images/step-10.png",
     video: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Designsanstitre22-ezgif.com-crop-video-odIUQV487gQbQGlryj7z38lrlmjXsg.mp4",
-    description:
-      "Retirez tous les films plastiques. Retirez délicatement les boucliers des paupières. Avec des cotons et un nettoyant doux, nettoyez soigneusement les cils, les paupières et les sourcils pour enlever tous les résidus de produit.",
-    benefits: ["Nettoyage complet", "Élimination des résidus", "Finition parfaite"],
+    description: "Retirez le film plastique et nettoyez la première lotion. Appliquez la lotion fixatrice (neutralisante) sur les cils pour verrouiller leur nouvelle courbure. Recouvrez à nouveau de film et laissez poser 10 minutes.",
+    benefits: ["Courbure verrouillée", "Effet longue durée", "Résultat optimal"],
   },
   {
     id: 11,
-    title: "Soin nourrissant et brossage final",
-    duration: "2 min",
+    title: "Nettoyage final des cils",
+    duration: "3 min",
     image: "/images/step-11.png",
     video: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Designsanstitre23-ezgif.com-crop-video-4EJZlx86JYvSQBBbwbiMRPwd9zWyHW.mp4",
-    description:
-      "Appliquez une huile nourrissante sur les cils et les sourcils avec des brosses propres. Ce soin final hydrate et donne de la brillance. Brossez une dernière fois pour un résultat impeccable.",
-    benefits: ["Hydratation optimale", "Brillance naturelle", "Résultat impeccable"],
+    description: "Retirez tous les films plastiques et boucliers délicatement. Nettoyez soigneusement les cils avec des cotons et un nettoyant doux pour enlever tous les résidus de produit.",
+    benefits: ["Nettoyage complet", "Élimination des résidus", "Finition parfaite"],
   },
   {
     id: 12,
-    title: "Étape 12 - À définir",
-    duration: "5 min",
+    title: "Transition vers les sourcils",
+    duration: "2 min",
     image: "/images/step-12.png",
-    video: "/videos/step-11.mp4",
-    description: "Description de l'étape 12 à personnaliser selon le processus de lash lifting.",
-    benefits: ["Bénéfice 1", "Bénéfice 2", "Bénéfice 3"],
+    video: "/videos/step-12.mp4",
+    description: "Pendant que les cils posent sous le film plastique, passons à la technique de rehaussement des sourcils. Préparez les outils spécialisés pour cette partie du traitement.",
+    benefits: ["Optimisation du temps", "Efficacité du protocole", "Transition fluide"],
   },
   {
     id: 13,
-    title: "Étape 13 - À définir",
-    duration: "3 min",
+    title: "Nettoyage et préparation des sourcils",
+    duration: "5 min",
     image: "/images/step-13.png",
-    video: "/videos/step-12.mp4",
-    description: "Description de l'étape 13 à personnaliser selon le processus de lash lifting.",
-    benefits: ["Bénéfice 1", "Bénéfice 2", "Bénéfice 3"],
+    video: "/videos/step-13.mp4",
+    description: "Nettoyez délicatement la zone des sourcils avec un démaquillant doux. Brossez les poils dans le sens de la pousse pour bien les séparer et identifier leur direction naturelle.",
+    benefits: ["Sourcils propres", "Poils bien séparés", "Préparation optimale"],
   },
   {
     id: 14,
-    title: "Étape 14 - À définir",
-    duration: "4 min",
+    title: "Mapping et design des sourcils",
+    duration: "8 min",
     image: "/images/step-14.png",
-    video: "/videos/step-13.mp4",
-    description: "Description de l'étape 14 à personnaliser selon le processus de lash lifting.",
-    benefits: ["Bénéfice 1", "Bénéfice 2", "Bénéfice 3"],
+    video: "/videos/step-14.mp4",
+    description: "Utilisez des outils de mesure pour définir la forme parfaite des sourcils selon la morphologie du visage. Marquez les points clés : début, arche et fin du sourcil.",
+    benefits: ["Forme personnalisée", "Symétrie parfaite", "Résultat harmonieux"],
   },
   {
     id: 15,
-    title: "Étape 15 - À définir",
-    duration: "6 min",
+    title: "Application de l'adhésif sourcils",
+    duration: "4 min",
     image: "/images/step-15.png",
-    video: "/videos/step-14.mp4",
-    description: "Description de l'étape 15 à personnaliser selon le processus de lash lifting.",
-    benefits: ["Bénéfice 1", "Bénéfice 2", "Bénéfice 3"],
+    video: "/videos/step-15.mp4",
+    description: "Appliquez l'adhésif spécialisé sur la peau au-dessus des sourcils où sera placé le bouclier. Veillez à une application uniforme pour une adhérence optimale.",
+    benefits: ["Adhérence parfaite", "Positionnement stable", "Base solide"],
   },
   {
     id: 16,
-    title: "Étape 16 - À définir",
-    duration: "8 min",
+    title: "Positionnement du bouclier sourcils",
+    duration: "3 min",
     image: "/images/step-16.png",
-    video: "/videos/step-15.mp4",
-    description: "Description de l'étape 16 à personnaliser selon le processus de lash lifting.",
-    benefits: ["Bénéfice 1", "Bénéfice 2", "Bénéfice 3"],
+    video: "/videos/step-16.mp4",
+    description: "Placez soigneusement le bouclier spécialisé pour sourcils selon le mapping établi. Assurez-vous qu'il épouse parfaitement la forme désirée du sourcil.",
+    benefits: ["Positionnement précis", "Forme idéale", "Maintien optimal"],
   },
   {
     id: 17,
-    title: "Étape 17 - À définir",
-    duration: "5 min",
+    title: "Fixation des poils sur le bouclier",
+    duration: "6 min",
     image: "/images/step-17.png",
-    video: "/videos/step-16.mp4",
-    description: "Description de l'étape 17 à personnaliser selon le processus de lash lifting.",
-    benefits: ["Bénéfice 1", "Bénéfice 2", "Bénéfice 3"],
+    video: "/videos/step-17.mp4",
+    description: "Brossez les poils des sourcils vers le haut et fixez-les sur le bouclier avec l'adhésif. Veillez à ce que tous les poils soient bien séparés et parallèles.",
+    benefits: ["Poils bien positionnés", "Séparation parfaite", "Direction uniforme"],
   },
   {
     id: 18,
-    title: "Étape 18 - À définir",
-    duration: "7 min",
+    title: "Application de la première lotion sourcils",
+    duration: "10 min",
     image: "/images/step-18.png",
-    video: "/videos/step-17.mp4",
-    description: "Description de l'étape 18 à personnaliser selon le processus de lash lifting.",
-    benefits: ["Bénéfice 1", "Bénéfice 2", "Bénéfice 3"],
+    video: "/videos/step-18.mp4",
+    description: "Appliquez la première lotion de lifting sur les poils des sourcils. Recouvrez avec un film et laissez poser selon le temps adapté à l'épaisseur des poils.",
+    benefits: ["Restructuration des poils", "Préparation au moulage", "Flexibilité optimale"],
   },
   {
     id: 19,
-    title: "Étape 19 - À définir",
-    duration: "4 min",
+    title: "Application de la lotion neutralisante sourcils",
+    duration: "8 min",
     image: "/images/step-19.png",
-    video: "/videos/step-18.mp4",
-    description: "Description de l'étape 19 à personnaliser selon le processus de lash lifting.",
-    benefits: ["Bénéfice 1", "Bénéfice 2", "Bénéfice 3"],
+    video: "/videos/step-19.mp4",
+    description: "Nettoyez la première lotion et appliquez la lotion neutralisante sur les sourcils. Cette étape fixe la nouvelle direction des poils vers le haut.",
+    benefits: ["Fixation de la forme", "Effet longue durée", "Direction maintenue"],
   },
   {
     id: 20,
-    title: "Étape 20 - À définir",
-    duration: "6 min",
+    title: "Retrait des boucliers et nettoyage",
+    duration: "4 min",
     image: "/images/step-20.png",
-    video: "/videos/step-19.mp4",
-    description: "Description de l'étape 20 à personnaliser selon le processus de lash lifting.",
-    benefits: ["Bénéfice 1", "Bénéfice 2", "Bénéfice 3"],
+    video: "/videos/step-20.mp4",
+    description: "Retirez délicatement tous les boucliers et films plastiques. Nettoyez soigneusement les sourcils pour éliminer tous les résidus de produit.",
+    benefits: ["Nettoyage complet", "Révélation du résultat", "Élimination des résidus"],
   },
   {
     id: 21,
-    title: "Étape 21 - À définir",
-    duration: "8 min",
+    title: "Application d'huile nourrissante",
+    duration: "3 min",
     image: "/images/step-21.png",
-    video: "/videos/step-20.mp4",
-    description: "Description de l'étape 21 à personnaliser selon le processus de lash lifting.",
-    benefits: ["Bénéfice 1", "Bénéfice 2", "Bénéfice 3"],
+    video: "/videos/step-21.mp4",
+    description: "Appliquez une huile nourrissante spécialisée sur les cils et sourcils avec des brosses propres. Ce soin hydrate et apporte de la brillance naturelle.",
+    benefits: ["Hydratation intense", "Brillance naturelle", "Protection des poils"],
   },
   {
     id: 22,
-    title: "Étape 22 - À définir",
-    duration: "5 min",
+    title: "Brossage final et mise en forme",
+    duration: "2 min",
     image: "/images/step-22.png",
-    video: "/videos/step-21.mp4",
-    description: "Description de l'étape 22 à personnaliser selon le processus de lash lifting.",
-    benefits: ["Bénéfice 1", "Bénéfice 2", "Bénéfice 3"],
+    video: "/videos/step-22.mp4",
+    description: "Brossez une dernière fois les cils et sourcils dans leur nouvelle direction pour un résultat parfaitement net et défini.",
+    benefits: ["Finition parfaite", "Résultat impeccable", "Mise en forme finale"],
   },
   {
     id: 23,
-    title: "Étape 23 - À définir",
+    title: "Vérification et retouches",
     duration: "3 min",
     image: "/images/step-23.png",
-    video: "/videos/step-22.mp4",
-    description: "Description de l'étape 23 à personnaliser selon le processus de lash lifting.",
-    benefits: ["Bénéfice 1", "Bénéfice 2", "Bénéfice 3"],
+    video: "/videos/step-23.mp4",
+    description: "Examinez attentivement le résultat final. Effectuez les retouches nécessaires pour garantir une symétrie parfaite entre les deux yeux.",
+    benefits: ["Contrôle qualité", "Symétrie parfaite", "Résultat optimal"],
   },
   {
     id: 24,
-    title: "Étape 24 - À définir",
-    duration: "4 min",
+    title: "Conseils et recommandations post-traitement",
+    duration: "5 min",
     image: "/images/step-24.png",
-    video: "/videos/step-23.mp4",
-    description: "Description de l'étape 24 à personnaliser selon le processus de lash lifting.",
-    benefits: ["Bénéfice 1", "Bénéfice 2", "Bénéfice 3"],
+    video: "/videos/step-24.mp4",
+    description: "Donnez au client toutes les instructions importantes pour les 24-48h suivant le traitement. Expliquez les soins à éviter et les bonnes pratiques à adopter.",
+    benefits: ["Instructions claires", "Préservation du résultat", "Satisfaction client"],
   },
   {
     id: 25,
-    title: "Étape 25 - À définir",
-    duration: "6 min",
-    image: "/images/step-25.png",
-    video: "/videos/step-24.mp4",
-    description: "Description de l'étape 25 à personnaliser selon le processus de lash lifting.",
-    benefits: ["Bénéfice 1", "Bénéfice 2", "Bénéfice 3"],
-  },
-  {
-    id: 26,
-    title: "Étape 26 - À définir",
-    duration: "8 min",
-    image: "/images/step-26.png",
-    video: "/videos/step-25.mp4",
-    description: "Description de l'étape 26 à personnaliser selon le processus de lash lifting.",
-    benefits: ["Bénéfice 1", "Bénéfice 2", "Bénéfice 3"],
-  },
-  {
-    id: 27,
-    title: "Étape 27 - À définir",
-    duration: "5 min",
-    image: "/images/step-27.png",
-    video: "/videos/step-26.mp4",
-    description: "Description de l'étape 27 à personnaliser selon le processus de lash lifting.",
-    benefits: ["Bénéfice 1", "Bénéfice 2", "Bénéfice 3"],
-  },
-  {
-    id: 28,
-    title: "Étape 28 - À définir",
-    duration: "7 min",
-    image: "/images/step-28.png",
-    video: "/videos/step-27.mp4",
-    description: "Description de l'étape 28 à personnaliser selon le processus de lash lifting.",
-    benefits: ["Bénéfice 1", "Bénéfice 2", "Bénéfice 3"],
-  },
-  {
-    id: 29,
-    title: "Étape 29 - À définir",
-    duration: "4 min",
-    image: "/images/step-29.png",
-    video: "/videos/step-28.mp4",
-    description: "Description de l'étape 29 à personnaliser selon le processus de lash lifting.",
-    benefits: ["Bénéfice 1", "Bénéfice 2", "Bénéfice 3"],
-  },
-  {
-    id: 30,
-    title: "Étape 30 - À définir",
-    duration: "6 min",
-    image: "/images/step-30.png",
-    video: "/videos/step-29.mp4",
-    description: "Description de l'étape 30 à personnaliser selon le processus de lash lifting.",
-    benefits: ["Bénéfice 1", "Bénéfice 2", "Bénéfice 3"],
-  },
-  {
-    id: 31,
-    title: "Vidéo complète", // Swapped step 31 content with step 32
+    title: "Vidéo complète",
     duration: "0 min",
     image: "",
     video: "",
-    description: "Regardez l'intégralité du protocole de Lash and Brow lift en une seule vidéo sans interruption.", // Updated description to match user's exact text
+    description: "Regardez l'intégralité du protocole de Lash and Brow lift en une seule vidéo sans interruption.",
     benefits: ["Formation complète", "Apprentissage continu", "Référence professionnelle"],
   },
   {
-    id: 32,
-    title: "Résultat final", // Swapped step 32 content with step 31
-    duration: "0 min", // No duration for result display
+    id: 26,
+    title: "Résultat final",
+    duration: "0 min",
     image: "/images/step-31.png",
-    video: "/videos/step-30.mp4",
-    description:
-      "Voici le résultat final obtenu après l'application complète du protocole de lash lifting et rehaussement des sourcils.",
+    video: "/videos/step-26.mp4",
+    description: "Voici le résultat final obtenu après l'application complète du protocole de lash lifting et rehaussement des sourcils.",
     benefits: ["Résultat professionnel", "Effet longue durée", "Satisfaction client"],
   },
 ]
@@ -471,10 +407,10 @@ export default function MicroneedlingTreatmentGuide() {
         className="flex gap-2 md:gap-3 mt-6 flex-wrap justify-center"
       >
         <div className="bg-green-500 text-white px-3 py-1 md:px-4 md:py-2 rounded-full text-xs md:text-sm font-bold">
-          32/32 Étapes
+          26/26 Étapes
         </div>
         <div className="bg-blue-500 text-white px-3 py-1 md:px-4 md:py-2 rounded-full text-xs md:text-sm font-bold">
-          90 Minutes
+          85 Minutes
         </div>
         <div className="bg-purple-500 text-white px-3 py-1 md:px-4 md:py-2 rounded-full text-xs md:text-sm font-bold">
           Certifié
@@ -523,7 +459,7 @@ export default function MicroneedlingTreatmentGuide() {
 
             <div className="flex-1 flex items-center justify-center p-4">
               <div className="w-full max-w-6xl">
-                {currentStep === 31 ? (
+                {currentStep === 24 ? (
                   <div style={{ padding: "56.25% 0 0 0", position: "relative" }}>
                     <iframe
                       src="https://player.vimeo.com/video/1115752305?h=bd7693bad4&badge=0&autopause=0&player_id=0&app_id=58479"
@@ -562,7 +498,7 @@ export default function MicroneedlingTreatmentGuide() {
               <div className="flex flex-wrap gap-2 text-sm font-quicksand text-gray-600">
                 <span>Technique professionnelle</span>
                 <span className="hidden sm:inline">•</span>
-                <span>32 étapes essentielles</span>
+                <span>26 étapes essentielles</span>
                 <span className="hidden sm:inline">•</span>
                 <span>Cils recourbés naturellement</span>
                 <span className="hidden sm:inline">•</span>
@@ -582,7 +518,7 @@ export default function MicroneedlingTreatmentGuide() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-9 gap-4 p-2 md:p-4">
-          {currentStep === 31 ? ( // Updated condition to check for step 31 (now video step)
+          {currentStep === 24 ? ( // Updated condition to check for step 25 (now video step)
             <div className="md:col-span-9">
               <motion.div
                 key={`video-step-${currentStep}`}
@@ -606,7 +542,7 @@ export default function MicroneedlingTreatmentGuide() {
                 </Button>
               </motion.div>
             </div>
-          ) : currentStep === 14 ? ( // Updated condition to check for step 15 (index 14)
+          ) : currentStep === 11 ? ( // Updated condition to check for step 12 (index 11)
             <div className="md:col-span-9">
               <motion.div
                 key={`transition-${currentStep}`}
@@ -624,7 +560,7 @@ export default function MicroneedlingTreatmentGuide() {
                 </p>
               </motion.div>
             </div>
-          ) : currentStep === 30 ? ( // Updated condition to check for step 32 (now result step)
+          ) : currentStep === 25 ? ( // Updated condition to check for step 26 (now result step)
             <div className="md:col-span-9">
               <motion.div
                 key={`result-${currentStep}`}
@@ -758,14 +694,14 @@ export default function MicroneedlingTreatmentGuide() {
           <div className="p-4">
             <div className="text-center mb-3">
               <h2 className="text-xl font-bold font-saeada text-gray-800 mb-2">{currentStepData.title}</h2>
-              {currentStep !== 31 && currentStep !== 14 && (
+              {currentStep !== 24 && currentStep !== 11 && (
                 <span className="inline-block px-4 py-2 bg-brand-gradient text-white rounded-full text-sm font-bold font-quicksand">
                   {currentStepData.duration}
                 </span>
               )}
             </div>
 
-            {currentStep === 31 && (
+            {currentStep === 24 && (
               <div className="border-t border-gray-100 pt-3">
                 <p className="text-sm font-quicksand text-gray-600 leading-relaxed text-center mb-4">
                   Regardez l'intégralité du protocole de Lash and Brow lift en une seule vidéo sans interruption.
@@ -782,7 +718,7 @@ export default function MicroneedlingTreatmentGuide() {
               </div>
             )}
 
-            {currentStep === 30 && (
+            {currentStep === 25 && (
               <div className="border-t border-gray-100 pt-3">
                 <p className="text-sm font-quicksand text-gray-600 leading-relaxed text-center mb-4">
                   Voici le résultat final obtenu après l'application complète du protocole de lash lifting et
