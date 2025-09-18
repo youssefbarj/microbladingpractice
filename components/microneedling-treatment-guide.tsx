@@ -504,24 +504,26 @@ export default function MicroneedlingTreatmentGuide() {
           </div>
         </div>
 
-        {/* Important Notice Banner */}
-        <div className="mx-2 md:mx-4 mb-4">
-          <div className="bg-amber-50 border-l-4 border-amber-400 p-4 rounded-r-lg">
-            <div className="flex items-center">
-              <div className="flex-shrink-0">
-                <span className="text-amber-600 text-lg">⚠️</span>
-              </div>
-              <div className="ml-3">
-                <p className="text-sm font-medium text-amber-800">
-                  <strong>Mannequin silicone requis</strong> - À acheter séparément
-                </p>
-                <p className="text-xs text-amber-700 mt-1">
-                  Cette formation nécessite un mannequin silicone pour la pratique avant de travailler sur de vrais clients.
-                </p>
+        {/* Important Notice Banner - Only show on first step */}
+        {currentStep === 0 && (
+          <div className="mx-2 md:mx-4 mb-4">
+            <div className="bg-amber-50 border-l-4 border-amber-400 p-4 rounded-r-lg">
+              <div className="flex items-center">
+                <div className="flex-shrink-0">
+                  <span className="text-amber-600 text-lg">⚠️</span>
+                </div>
+                <div className="ml-3">
+                  <p className="text-sm font-medium text-amber-800">
+                    <strong>Mannequin silicone requis</strong> - À acheter séparément
+                  </p>
+                  <p className="text-xs text-amber-700 mt-1">
+                    Cette formation nécessite un mannequin silicone pour la pratique avant de travailler sur de vrais clients.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
-        </div>
+        )}
 
         <div className="grid grid-cols-1 md:grid-cols-9 gap-4 p-2 md:p-4">
           <>
