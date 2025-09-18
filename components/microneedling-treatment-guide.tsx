@@ -235,20 +235,20 @@ const treatmentSteps: TreatmentStep[] = [
   },
   {
     id: 25,
-    title: "Vidéo complète",
-    duration: "0 min",
-    image: "",
-    video: "",
-    description: "Regardez l'intégralité du protocole de Lash and Brow lift en une seule vidéo sans interruption.",
+    title: "Vidéo complète du protocole",
+    duration: "5 min",
+    image: "/images/step-25.png",
+    video: "https://player.vimeo.com/video/1115752305?h=bd7693bad4&badge=0&autopause=0&player_id=0&app_id=58479",
+    description: "Regardez l'intégralité du protocole de Lash and Brow lift en une seule vidéo sans interruption pour réviser toutes les étapes.",
     benefits: ["Formation complète", "Apprentissage continu", "Référence professionnelle"],
   },
   {
     id: 26,
-    title: "Résultat final",
-    duration: "0 min",
+    title: "Présentation du résultat final",
+    duration: "3 min",
     image: "/images/step-31.png",
     video: "/videos/step-26.mp4",
-    description: "Voici le résultat final obtenu après l'application complète du protocole de lash lifting et rehaussement des sourcils.",
+    description: "Présentez le résultat final au client en expliquant les bénéfices obtenus et les conseils d'entretien pour maintenir l'effet.",
     benefits: ["Résultat professionnel", "Effet longue durée", "Satisfaction client"],
   },
 ]
@@ -459,29 +459,16 @@ export default function MicroneedlingTreatmentGuide() {
 
             <div className="flex-1 flex items-center justify-center p-4">
               <div className="w-full max-w-6xl">
-                {currentStep === 24 ? (
-                  <div style={{ padding: "56.25% 0 0 0", position: "relative" }}>
-                    <iframe
-                      src="https://player.vimeo.com/video/1115752305?h=bd7693bad4&badge=0&autopause=0&player_id=0&app_id=58479"
-                      frameBorder="0"
-                      allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
-                      referrerPolicy="strict-origin-when-cross-origin"
-                      style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%" }}
-                      title="Combination Lash & Brow Lift Tutorial for beginners"
-                    />
-                  </div>
-                ) : (
-                  <div style={{ padding: "56.25% 0 0 0", position: "relative" }}>
-                    <iframe
-                      src="https://player.vimeo.com/video/1115956913?badge=0&autopause=0&player_id=0&app_id=58479"
-                      frameBorder="0"
-                      allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
-                      referrerPolicy="strict-origin-when-cross-origin"
-                      style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%" }}
-                      title="microblading_tutorial_for_beginners___e-lumy_digital_beauty_academy (1080p)"
-                    />
-                  </div>
-                )}
+                <div style={{ padding: "56.25% 0 0 0", position: "relative" }}>
+                  <iframe
+                    src="https://player.vimeo.com/video/1115956913?badge=0&autopause=0&player_id=0&app_id=58479"
+                    frameBorder="0"
+                    allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
+                    referrerPolicy="strict-origin-when-cross-origin"
+                    style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%" }}
+                    title="microblading_tutorial_for_beginners___e-lumy_digital_beauty_academy (1080p)"
+                  />
+                </div>
               </div>
             </div>
           </motion.div>
@@ -518,31 +505,7 @@ export default function MicroneedlingTreatmentGuide() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-9 gap-4 p-2 md:p-4">
-          {currentStep === 24 ? ( // Updated condition to check for step 25 (now video step)
-            <div className="md:col-span-9">
-              <motion.div
-                key={`video-step-${currentStep}`}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5 }}
-                className="bg-white rounded-3xl p-8 md:p-16 shadow-xl text-center min-h-[500px] md:min-h-[600px] flex flex-col justify-center"
-              >
-                <h2 className="text-4xl md:text-6xl font-bold font-saeada text-gray-800 mb-6 md:mb-8">
-                  Vidéo complète
-                </h2>
-                <p className="text-xl md:text-2xl font-quicksand text-gray-600 leading-relaxed max-w-4xl mx-auto mb-10 md:mb-12">
-                  Regardez l'intégralité du protocole de Lash and Brow lift en une seule vidéo sans interruption.
-                </p>
-                <Button
-                  onClick={() => setShowFullScreenVideo(true)}
-                  className="bg-blue-600 hover:bg-blue-700 text-white px-12 py-6 text-2xl font-bold rounded-full flex items-center gap-4 mx-auto shadow-xl hover:shadow-2xl transition-all duration-200"
-                >
-                  <Play size={32} />
-                  Regarder la vidéo sans interruption
-                </Button>
-              </motion.div>
-            </div>
-          ) : currentStep === 11 ? ( // Updated condition to check for step 12 (index 11)
+          {currentStep === 11 ? ( // Updated condition to check for step 12 (index 11)
             <div className="md:col-span-9">
               <motion.div
                 key={`transition-${currentStep}`}
@@ -558,38 +521,6 @@ export default function MicroneedlingTreatmentGuide() {
                   Pendant que les cils posent sous le film plastique, passons à la technique de rehaussement des
                   sourcils.
                 </p>
-              </motion.div>
-            </div>
-          ) : currentStep === 25 ? ( // Updated condition to check for step 26 (now result step)
-            <div className="md:col-span-9">
-              <motion.div
-                key={`result-${currentStep}`}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5 }}
-                className="bg-white rounded-3xl overflow-hidden shadow-xl"
-              >
-                {/* Large result image */}
-                <div className="relative w-full h-64 sm:h-80 md:h-96">
-                  {currentStepData.image && (
-                    <Image
-                      src={currentStepData.image || "/placeholder.svg"}
-                      alt={currentStepData.title}
-                      fill
-                      style={{ objectFit: "contain" }}
-                      priority
-                    />
-                  )}
-                </div>
-
-                {/* Title and description */}
-                <div className="p-6 md:p-8 text-center">
-                  <h2 className="text-3xl md:text-4xl font-bold font-saeada text-gray-800 mb-4">Résultat final</h2>
-                  <p className="text-lg md:text-xl font-quicksand text-gray-600 leading-relaxed max-w-3xl mx-auto">
-                    Voici le résultat final obtenu après l'application complète du protocole de lash lifting et
-                    rehaussement des sourcils.
-                  </p>
-                </div>
               </motion.div>
             </div>
           ) : (
@@ -694,38 +625,13 @@ export default function MicroneedlingTreatmentGuide() {
           <div className="p-4">
             <div className="text-center mb-3">
               <h2 className="text-xl font-bold font-saeada text-gray-800 mb-2">{currentStepData.title}</h2>
-              {currentStep !== 24 && currentStep !== 11 && (
+              {currentStep !== 11 && (
                 <span className="inline-block px-4 py-2 bg-brand-gradient text-white rounded-full text-sm font-bold font-quicksand">
                   {currentStepData.duration}
                 </span>
               )}
             </div>
 
-            {currentStep === 24 && (
-              <div className="border-t border-gray-100 pt-3">
-                <p className="text-sm font-quicksand text-gray-600 leading-relaxed text-center mb-4">
-                  Regardez l'intégralité du protocole de Lash and Brow lift en une seule vidéo sans interruption.
-                </p>
-                <div className="text-center">
-                  <Button
-                    onClick={() => setShowFullScreenVideo(true)}
-                    className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 text-lg font-bold rounded-full flex items-center gap-2 mx-auto"
-                  >
-                    <Play size={20} />
-                    Regarder la vidéo sans interruption
-                  </Button>
-                </div>
-              </div>
-            )}
-
-            {currentStep === 25 && (
-              <div className="border-t border-gray-100 pt-3">
-                <p className="text-sm font-quicksand text-gray-600 leading-relaxed text-center mb-4">
-                  Voici le résultat final obtenu après l'application complète du protocole de lash lifting et
-                  rehaussement des sourcils.
-                </p>
-              </div>
-            )}
           </div>
         </div>
 
