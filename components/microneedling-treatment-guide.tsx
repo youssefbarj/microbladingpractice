@@ -389,14 +389,14 @@ export default function MicroneedlingTreatmentGuide() {
       >
         <h2 className="text-3xl md:text-4xl font-bold font-saeada text-blue-900 mb-3">Félicitations !</h2>
         <p className="text-lg md:text-xl font-quicksand text-blue-800 mb-2">
-          Protocole Lash Lifting terminé avec succès
+          Formation Pratique Microblading terminée avec succès
         </p>
         <p className="text-base font-quicksand text-blue-700 mb-4">Toutes les étapes ont été complétées</p>
 
         <div className="bg-white/80 backdrop-blur-sm rounded-xl p-4 mx-4">
-          <p className="text-sm font-quicksand text-gray-600 mb-1">Protocole réalisé avec</p>
-          <h3 className="text-xl font-bold font-saeada text-brand-gradient">Guide Professionnel Lash Lifting</h3>
-          <p className="text-xs font-quicksand text-gray-500 mt-1">Méthode certifiée • Résultats garantis</p>
+          <p className="text-sm font-quicksand text-gray-600 mb-1">Formation réalisée avec</p>
+          <h3 className="text-xl font-bold font-saeada text-brand-gradient">Guide Professionnel Microblading</h3>
+          <p className="text-xs font-quicksand text-gray-500 mt-1">Méthode certifiée • Mannequin silicone</p>
         </div>
       </motion.div>
 
@@ -410,7 +410,7 @@ export default function MicroneedlingTreatmentGuide() {
           26/26 Étapes
         </div>
         <div className="bg-blue-500 text-white px-3 py-1 md:px-4 md:py-2 rounded-full text-xs md:text-sm font-bold">
-          85 Minutes
+          45 Minutes
         </div>
         <div className="bg-purple-500 text-white px-3 py-1 md:px-4 md:py-2 rounded-full text-xs md:text-sm font-bold">
           Certifié
@@ -480,16 +480,16 @@ export default function MicroneedlingTreatmentGuide() {
           <div className="flex flex-col sm:flex-row justify-between items-center gap-3 sm:gap-0">
             <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-4">
               <h1 className="text-xl sm:text-2xl font-bold font-saeada text-gray-800">
-                Protocole Complet de Lash Lifting
+                Formation Pratique Microblading
               </h1>
               <div className="flex flex-wrap gap-2 text-sm font-quicksand text-gray-600">
-                <span>Technique professionnelle</span>
+                <span>Entraînement sur mannequin silicone</span>
                 <span className="hidden sm:inline">•</span>
                 <span>26 étapes essentielles</span>
                 <span className="hidden sm:inline">•</span>
-                <span>Cils recourbés naturellement</span>
+                <span>Avant pratique clientèle</span>
                 <span className="hidden sm:inline">•</span>
-                <span>Effet longue durée</span>
+                <span>Matériel requis</span>
               </div>
             </div>
             <div className="flex items-center gap-3 sm:gap-4">
@@ -498,7 +498,26 @@ export default function MicroneedlingTreatmentGuide() {
               </span>
               <div className="flex items-center gap-2 bg-gray-100 px-3 py-1 sm:px-4 sm:py-2 rounded-full">
                 <Clock size={14} className="sm:w-4 sm:h-4" />
-                <span className="text-sm sm:text-base font-semibold font-quicksand text-gray-700">85min</span>
+                <span className="text-sm sm:text-base font-semibold font-quicksand text-gray-700">45min</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Important Notice Banner */}
+        <div className="mx-2 md:mx-4 mb-4">
+          <div className="bg-amber-50 border-l-4 border-amber-400 p-4 rounded-r-lg">
+            <div className="flex items-center">
+              <div className="flex-shrink-0">
+                <span className="text-amber-600 text-lg">⚠️</span>
+              </div>
+              <div className="ml-3">
+                <p className="text-sm font-medium text-amber-800">
+                  <strong>Mannequin silicone requis</strong> - À acheter séparément
+                </p>
+                <p className="text-xs text-amber-700 mt-1">
+                  Cette formation nécessite un mannequin silicone pour la pratique avant de travailler sur de vrais clients.
+                </p>
               </div>
             </div>
           </div>
