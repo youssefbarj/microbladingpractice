@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react"
 import { motion, AnimatePresence } from "framer-motion"
-import { RotateCcw, ChevronLeft, ChevronRight, Clock, CheckCircle, Trophy, Star, Sparkles, Play } from "lucide-react"
+import { RotateCcw, ChevronLeft, ChevronRight, Clock, CheckCircle, Trophy, Star, Sparkles, Play, X } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import Image from "next/image"
 
@@ -260,6 +260,7 @@ export default function MicroneedlingTreatmentGuide() {
   const [showCompletion, setShowCompletion] = useState(false)
   const [showMobileDetails, setShowMobileDetails] = useState(false)
   const [showFullScreenVideo, setShowFullScreenVideo] = useState(false)
+  const [showFullScreenImage, setShowFullScreenImage] = useState(false)
 
   useEffect(() => {
     let interval: NodeJS.Timeout
@@ -294,6 +295,7 @@ export default function MicroneedlingTreatmentGuide() {
     setShowCompletion(false)
     setShowMobileDetails(false)
     setShowFullScreenVideo(false)
+    setShowFullScreenImage(false)
   }
 
   const handleStepClick = (stepIndex: number) => {
@@ -303,6 +305,7 @@ export default function MicroneedlingTreatmentGuide() {
     setShowCompletion(false)
     setShowMobileDetails(false)
     setShowFullScreenVideo(false)
+    setShowFullScreenImage(false)
   }
 
   const handlePrevious = () => {
@@ -313,6 +316,7 @@ export default function MicroneedlingTreatmentGuide() {
       setShowCompletion(false)
       setShowMobileDetails(false)
       setShowFullScreenVideo(false)
+      setShowFullScreenImage(false)
     }
   }
 
@@ -324,6 +328,7 @@ export default function MicroneedlingTreatmentGuide() {
       setShowCompletion(false)
       setShowMobileDetails(false)
       setShowFullScreenVideo(false)
+      setShowFullScreenImage(false)
     }
   }
 
@@ -536,14 +541,15 @@ export default function MicroneedlingTreatmentGuide() {
                 className="bg-white rounded-3xl p-4 md:p-6 shadow-lg mb-4 md:mb-0"
               >
                 <div className="flex justify-center mb-4">
-                  <div className="w-40 h-40 bg-gradient-to-br from-blue-50 to-violet-50 rounded-xl overflow-hidden shadow-md">
+                  <div className="w-64 h-64 bg-gradient-to-br from-blue-50 to-violet-50 rounded-xl overflow-hidden shadow-md">
                     {currentStepData.image && (
                       <Image
                         src={currentStepData.image || "/placeholder.svg"}
                         alt={`${currentStepData.title} illustration`}
-                        width={160}
-                        height={160}
-                        className="w-full h-full object-contain"
+                        width={256}
+                        height={256}
+                        className="w-full h-full object-contain hover:scale-105 transition-transform duration-300 cursor-pointer"
+                        onClick={() => setShowFullScreenImage(true)}
                       />
                     )}
                   </div>
@@ -572,7 +578,7 @@ export default function MicroneedlingTreatmentGuide() {
                     animate={{ opacity: 1, scale: 1 }}
                     exit={{ opacity: 0, scale: 0.95 }}
                     transition={{ duration: 0.5 }}
-                    className="relative w-full h-64 sm:h-80 md:h-[28rem] bg-gradient-to-br from-blue-50 to-violet-50 rounded-3xl overflow-hidden shadow-lg"
+                    className="relative w-full h-80 sm:h-96 md:h-[32rem] bg-gradient-to-br from-blue-50 to-violet-50 rounded-3xl overflow-hidden shadow-lg"
                   >
                     {currentStepData.video ? (
                       <video
@@ -592,6 +598,8 @@ export default function MicroneedlingTreatmentGuide() {
                         alt={currentStepData.title}
                         fill
                         style={{ objectFit: "contain" }}
+                        className="hover:scale-105 transition-transform duration-300 cursor-pointer"
+                        onClick={() => setShowFullScreenImage(true)}
                         priority
                       />
                     ) : (
@@ -726,6 +734,44 @@ export default function MicroneedlingTreatmentGuide() {
             ))}
           </div>
         </div>
+
+        {/* Full Screen Image Modal */}
+        <AnimatePresence>
+          {showFullScreenImage && (
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              className="fixed inset-0 bg-black bg-opacity-90 flex items-center justify-center z-50 p-4"
+              onClick={() => setShowFullScreenImage(false)}
+            >
+              <motion.div
+                initial={{ scale: 0.8 }}
+                animate={{ scale: 1 }}
+                exit={{ scale: 0.8 }}
+                className="relative max-w-4xl max-h-full"
+                onClick={(e) => e.stopPropagation()}
+              >
+                <button
+                  onClick={() => setShowFullScreenImage(false)}
+                  className="absolute -top-12 right-0 text-white hover:text-gray-300 transition-colors duration-200"
+                >
+                  <X size={32} />
+                </button>
+                <Image
+                  src={currentStepData.image || "/placeholder.svg"}
+                  alt={currentStepData.title}
+                  width={800}
+                  height={600}
+                  className="max-w-full max-h-[80vh] object-contain rounded-lg shadow-2xl"
+                />
+                <div className="absolute -bottom-16 left-0 right-0 text-center">
+                  <h3 className="text-white text-lg font-semibold">{currentStepData.title}</h3>
+                </div>
+              </motion.div>
+            </motion.div>
+          )}
+        </AnimatePresence>
       </div>
     </div>
   )
