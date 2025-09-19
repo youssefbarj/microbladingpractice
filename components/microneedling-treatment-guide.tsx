@@ -394,7 +394,7 @@ export default function MicroneedlingTreatmentGuide() {
       >
         <h2 className="text-3xl md:text-4xl font-bold font-saeada text-blue-900 mb-3">Félicitations !</h2>
         <p className="text-lg md:text-xl font-quicksand text-blue-800 mb-2">
-          Formation Pratique Microblading terminée avec succès
+          Entraînez-vous! terminée avec succès
         </p>
         <p className="text-base font-quicksand text-blue-700 mb-4">Toutes les étapes ont été complétées</p>
 
@@ -485,7 +485,7 @@ export default function MicroneedlingTreatmentGuide() {
           <div className="flex flex-col sm:flex-row justify-between items-center gap-3 sm:gap-0">
             <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-4">
               <h1 className="text-xl sm:text-2xl font-bold font-saeada text-gray-800">
-                Formation Pratique Microblading
+                Entraînez-vous!
               </h1>
               <div className="flex flex-wrap gap-2 text-sm font-quicksand text-gray-600">
                 <span>Entraînement sur mannequin silicone</span>
