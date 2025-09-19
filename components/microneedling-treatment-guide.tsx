@@ -584,11 +584,13 @@ export default function MicroneedlingTreatmentGuide() {
                       <video
                         key={currentStepData.video}
                         className="w-full h-full object-contain"
-                        autoPlay
-                        loop
-                        muted
-                        playsInline
+                        autoPlay={true}
+                        loop={true}
+                        muted={true}
+                        playsInline={true}
+                        controls={false}
                       >
+                        <source src={currentStepData.video} type="video/quicktime" />
                         <source src={currentStepData.video} type="video/mp4" />
                         Your browser does not support the video tag.
                       </video>
