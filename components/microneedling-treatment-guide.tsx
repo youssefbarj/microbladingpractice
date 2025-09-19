@@ -541,14 +541,14 @@ export default function MicroneedlingTreatmentGuide() {
                 className="bg-white rounded-3xl p-4 md:p-6 shadow-lg mb-4 md:mb-0"
               >
                 <div className="flex justify-center mb-4">
-                  <div className="w-64 h-64 bg-gradient-to-br from-blue-50 to-violet-50 rounded-xl overflow-hidden shadow-md">
+                  <div className="w-64 h-64 rounded-xl overflow-hidden shadow-md">
                     {currentStepData.image && (
                       <Image
                         src={currentStepData.image || "/placeholder.svg"}
                         alt={`${currentStepData.title} illustration`}
                         width={256}
                         height={256}
-                        className="w-full h-full object-contain hover:scale-105 transition-transform duration-300 cursor-pointer"
+                        className="w-full h-full object-cover hover:scale-105 transition-transform duration-300 cursor-pointer"
                         onClick={() => setShowFullScreenImage(true)}
                       />
                     )}
@@ -578,12 +578,12 @@ export default function MicroneedlingTreatmentGuide() {
                     animate={{ opacity: 1, scale: 1 }}
                     exit={{ opacity: 0, scale: 0.95 }}
                     transition={{ duration: 0.5 }}
-                    className="relative w-full h-80 sm:h-96 md:h-[32rem] bg-gradient-to-br from-blue-50 to-violet-50 rounded-3xl overflow-hidden shadow-lg"
+                    className="relative w-full h-80 sm:h-96 md:h-[32rem] rounded-3xl overflow-hidden shadow-lg bg-gray-100"
                   >
                     {currentStepData.video ? (
                       <video
                         key={currentStepData.video}
-                        className="w-full h-full object-contain"
+                        className="w-full h-full object-cover"
                         autoPlay={true}
                         loop={true}
                         muted={true}
@@ -599,7 +599,7 @@ export default function MicroneedlingTreatmentGuide() {
                         src={currentStepData.image || "/placeholder.svg"}
                         alt={currentStepData.title}
                         fill
-                        style={{ objectFit: "contain" }}
+                        style={{ objectFit: "cover" }}
                         className="hover:scale-105 transition-transform duration-300 cursor-pointer"
                         onClick={() => setShowFullScreenImage(true)}
                         priority
