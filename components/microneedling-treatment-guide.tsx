@@ -583,7 +583,7 @@ export default function MicroneedlingTreatmentGuide() {
                     {currentStepData.video ? (
                       <video
                         key={currentStepData.video}
-                        className="w-full h-full object-cover"
+                        className="w-full h-full object-contain"
                         autoPlay={true}
                         loop={true}
                         muted={true}
